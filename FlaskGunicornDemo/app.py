@@ -6,8 +6,8 @@ app = Flask(__name__)
 @app.route("/")
 def index():
 	return jsonify({
-		"message": "Hello from Flask + Gunicorn!"
-		"worker": os.getenv.get("WORKER_ID", "unknown")
+		"message": "Hello from Flask + Gunicorn!",
+		"worker": os.getenv("WORKER_ID", "unknown")
 	})
 
 @app.route("/echo", methods=["POST"])
